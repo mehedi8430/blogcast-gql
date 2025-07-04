@@ -8,8 +8,8 @@ export default function Header() {
       </h1>
       <nav className="flex space-x-6">
         <a href="/">Home</a>
-        <a href="/posts">Blog</a>
-        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/#">About</a>
       </nav>
       <div className="flex items-center space-x-4">
         <Socials />

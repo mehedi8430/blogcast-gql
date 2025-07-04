@@ -1,8 +1,8 @@
 import { getAllPosts } from "@/queries/blog-data";
 
 export default async function HomePage() {
-  // const allPosts = await getAllPosts(["Programming", "Web3"]);
-  // console.log({ allPosts });
+  const posts = await getAllPosts([]);
+  console.log({ posts });
 
   return (
     <div>
