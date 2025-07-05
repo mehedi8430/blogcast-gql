@@ -1,13 +1,14 @@
 import { getAllPosts } from "@/queries/blog-data";
 import LatestPost from "./latest-post";
 import PostCard from "./post-card";
+import { TEdges, TPost } from "@/types";
 
-export default async function PostList() {
-  const posts = await getAllPosts([]);
+export default async function PostList({ posts = [] }: { posts: TEdges[] }) {
+  // const posts = await getAllPosts([]);
 
   console.log(posts);
   // posts are sorted by time. Get the latest one.
-  const latestPost = posts[0].node;
+  const latestPost = posts[0]?.node;
   // rest of the post to handle separately.
   const restPosts = posts.slice(1);
 

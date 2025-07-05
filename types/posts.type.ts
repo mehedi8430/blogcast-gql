@@ -1,3 +1,9 @@
+export type TTag = {
+  name: string;
+  slug: string;
+  id: string;
+};
+
 export type TPost = {
   author: {
     name: string;
@@ -10,11 +16,7 @@ export type TPost = {
   coverImage: {
     url: string;
   };
-  tags: {
-    name: string;
-    slug: string;
-    id: string;
-  }[];
+  tags: TTag[];
   publishedAt: string;
   readTimeInMinutes: number;
 };
